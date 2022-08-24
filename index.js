@@ -48,7 +48,7 @@ console.log(typeof selectedColors); // Object
 console.log(selectedColors.length);
 
 // 07: FUNCTIONS()
-
+// Performing a task
 function greet(name, LastNamE) {
   console.log("How are you?" + name + " " + LastNamE); //Apare How are you ? Ruxandra
   //Apare How are you? Laura
@@ -56,3 +56,17 @@ function greet(name, LastNamE) {
 greet(" Ruxandra", "Nicoleta");
 greet(" Laura", "Geanina");
 greet(33);
+
+// 08: TYPE OF FUNCTIONS
+//-Performing a Task
+//-Calculating a Value
+function square(number) {
+  return number * number;
+}
+// console.log(square(2));
+
+// let Person = {
+//   nume: "Laur",
+//   varsta: 23,
+// };
+// console.log(Person["nume"]);
