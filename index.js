@@ -179,3 +179,16 @@ console.log(message); //yes
 let xx = 2 + 3 * 4;
 console.log(xx); // 14
 //multiplication precedence is higher than addition value
+
+//EXERCITII
+let aa = "red";
+let bb = "blue";
+
+let cc = aa;
+aa = bb;
+bb = cc;
+
+console.log(aa);
+console.log(bb);
+console.log(aa);
+console.log(bb);
