@@ -70,3 +70,112 @@ function square(number) {
 //   varsta: 23,
 // };
 // console.log(Person["nume"]);
+
+// 09: A: ARITHMETIC OPERATOR
+let X = 10;
+let Y = 5;
+console.log(X + Y);
+console.log(X - Y);
+console.log(X * Y);
+console.log(X / Y);
+console.log(X % Y);
+console.log(X ** Y);
+
+// INCREMENT (++)
+console.log(X++);
+console.log(X);
+
+// DECREMENT (--)
+console.log(--X);
+
+// B: ASSIGNMENT OPERATOR
+let a = 10;
+a = a + 5;
+// SAU(Acelasi lucru)
+a += 5;
+a = a * 10;
+a *= 10;
+
+// C: COMPARISON OPERATOR
+//   Relatinal Operator
+console.log(X > 9);
+console.log(X >= 9);
+console.log(X <= 9);
+console.log(X <= 9);
+
+// STRICT EQUALITY OPERATOR (SAME TYPE AND VALUE)
+console.log(X === 10);
+
+// LOSE EQUALITY OPERATOR (VALUE ARE EQUAL)
+console.log(X == 10); //TRUE
+console.log("10" == 10); //TRUE
+console.log(true == 10); //FALSE
+
+// D: TERNARY sau CONDITIONAL OPERATOR
+// ex: If a customer has more than 100points, they are a "gold"
+//customer, otherwise they are a "silver" customer.
+
+let points = 110;
+let type = points > 100 ? "gold" : "silver";
+console.log(type); // gold customer
+
+// E: LOGICAL OPERATOR
+// ( AND ) && = (BOTH has to be TRUE)
+console.log(true && true);
+//EX:
+let hightIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = hightIncome && goodCreditScore; // loan = IMPRUMUT
+console.log(eligibleForLoan); //True
+
+// ( OR ) || = (0NE has to be TRUE)
+eligibleForLoan = hightIncome || goodCreditScore;
+console.log("Eligible", eligibleForLoan); //Eligible=False
+
+// ( NOT ) ! =(TRANSFORMA TRUE in FALSE)
+let aplicationRefused = !eligibleForLoan;
+console.log("Aplication Refuse", eligibleForLoan); // Aplication Refuse=True
+
+// LOGICAL OPERATOR with NON-BOOLEANS
+// FALSY: undefined, null, 0, false, NaN, false," " .
+// EX:
+let userColor = undefined;
+let defaultColor = "green";
+let currentColor = userColor || defaultColor;
+console.log(currentColor); //pink
+
+// F: BITWISE OPERATOR
+// Binary sistem format di 1 si 0
+// 1 reprezentat de = 00000001(7 de 0 si 1)
+// 8 digiti numiti bits avem 8 bits si e 1 bits of information
+//in computer
+
+// 1 =        00000001
+// 2 =        00000010( 6 de zero si 1 0 )
+//Result(3) = 00000011 (Se uita sa vada care are 1 pe coloana lui de acolo 00000011)
+console.log(1 | 2); //bitwise OR// Rezulta 3
+//Si in sistemul bunar 00000011 = 3
+console.log(1 & 2); // Bitwise AND // 0
+//DACA primele cifre sun 1 rezulta True
+//Result(0) = pt ca toate de sus is 0
+
+//Ex: In real world
+// User are permisiunea: READ, WRITE, EXECUTE
+// 00000100(permisiune sa READ) // 4 transformat in numere decimale
+// 00000010(permisiune sa READ, WRITE)
+// 00000001(permisiune sa READ, WRITE, EXECUTE)
+const readPermision = 4;
+const writePermision = 2;
+const executePermision = 1;
+
+let myPermision = 0;
+myPermision = myPermision | readPermision | writePermision;
+console.log(myPermision); //6
+
+let message = myPermision & readPermision ? "yes" : "no";
+console.log(message); //yes
+
+// G: OPERATOR PRECEDENCE
+let xx = 2 + 3 * 4;
+console.log(xx); // 14
+//multiplication precedence is higher than addition value
