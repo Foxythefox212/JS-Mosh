@@ -192,3 +192,46 @@ console.log(aa);
 console.log(bb);
 console.log(aa);
 console.log(bb);
+
+// IF...ELSE CONDITIONAL STATEMENT
+
+//Hour
+//If it is between 6am and 12pm: Good morning!
+//If it is between 12pm and 6pm: Good afternoon!
+//Oterwise: Good evening!
+let hour = 10;
+if (hour >= 6 && hour < 12) {
+  console.log("Good morning!");
+} else if (hour >= 12 && hour < 18) {
+  console.log("Good afternoon!");
+} else {
+  console.log("Good evening!");
+}
+
+// SWITCH ..CASE
+let role = "guest";
+
+switch (role) {
+  case "guest":
+    console.log("Guest User"); // Guest
+    break;
+  case "moderator":
+    console.log("Moderator User");
+    break;
+  case "administrator":
+    console.log("Administrator User");
+    break;
+  default:
+    console.log("Unknow User");
+}
+// Folosim IF / ELSE
+
+if (role === "guest") {
+  console.log("Guest User"); // Guest
+} else if (role === "moderator") {
+  console.log("Moderator User");
+} else if (role === "administrator") {
+  console.log("Administrator User");
+} else {
+  console.log("Unknow User");
+}
