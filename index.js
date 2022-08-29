@@ -235,3 +235,13 @@ if (role === "guest") {
 } else {
   console.log("Unknow User");
 }
+
+// LOOPS = FOR, WHILE, DO...WHILE, FOR...IN, FOR...OF
+//FOR LOOP: We need 3 statements: (1)nitialExpresion; (2)Condition; (3)Incremenet exprseion
+// i = index si e folosit pe loops se numeste loop variable
+for (let i = 0; i < 5; i++) {
+  console.log("Hello World!", i); //Hello World de 5 ori
+}
+for (let i = 5; i >= 1; i--) {
+  if (i % 2 !== 0) console.log(i); //5 3 1
+}
