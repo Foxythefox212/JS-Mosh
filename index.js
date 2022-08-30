@@ -208,7 +208,7 @@ if (hour >= 6 && hour < 12) {
   console.log("Good evening!");
 }
 
-// SWITCH ..CASE
+// SWITCH ...CASE
 let role = "guest";
 
 switch (role) {
@@ -240,8 +240,25 @@ if (role === "guest") {
 //FOR LOOP: We need 3 statements: (1)nitialExpresion; (2)Condition; (3)Incremenet exprseion
 // i = index si e folosit pe loops se numeste loop variable
 for (let i = 0; i < 5; i++) {
-  console.log("Hello World!", i); //Hello World de 5 ori
+  console.log("Hello World!", i); // Hello World de 5 ori
 }
-for (let i = 5; i >= 1; i--) {
-  if (i % 2 !== 0) console.log(i); //5 3 1
+for (let i = 0; i <= 5; i++) {
+  if (i % 2 !== 0) console.log(i); // 5 3 1
 }
+
+// WHILE (condition) apoi statement if apoi increment ++
+// LET e declarat extern fata de for care a declarat intern si
+//LET-urile sunt diferite
+let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log(i); // 1 3 5 odd=(numere impare)
+  i++;
+}
+
+// DO-WHILE = Conditia e evaluata(luata in considerare) la sfarsit
+//si inseamna ca statementul din paranteza ruleaza cel putin o data
+let i = 9;
+do {
+  if (i % 2 !== 0) console.log(i);
+  i++;
+} while (i <= 5);
