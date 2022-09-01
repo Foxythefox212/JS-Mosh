@@ -265,22 +265,37 @@ do {
 
 // INFINITE LOOPS
 // Se poate crea infinit loop cu WHILE
-let ii = 0;
-while (ii < 5) {
-  console.log(ii);
-  ii++;
-}
-//SAU 
-while (true) {
-
-}//Infinite Loop
+// let ii = 0;
+// while (ii < 5) {
+//   console.log(ii);
+//   ii++;
+// }
+//SAU
+// while (true) {} //Infinite Loop
 
 // Se poate crea si cu DO-WHILE
-let w = o;
-do {
-  // w++;
-}while (w < 5);
- for (let iii = 0; iii > 0; iii++)
+// let w = o;
+// do {
+//   // w++;
+// } while (w < 5);
+// for (let iii = 0; iii > 0; iii++);
 
-//Daca nu incrementam i sau ce declaram sau uitam sa punem a treia 
+//Daca nu incrementam i sau ce declaram sau uitam sa punem a treia
 // conditie i++ se creeaza loop
+
+// FOR, WHILE, DO-WHILE- Repeti o actiune a number of time
+
+//FOR-IN LOOP
+//-Se folosesc pt iterate(repetare) over the properties of an object or
+//elements in array
+const persons = {
+  nameR: "Laur",
+  ageR: 35,
+};
+
+for (let key in persons) console.log(key, persons[key]);
+//Dot Notation  persons.nameR
+//Bracket Notation  persons["nameR"]
+
+const color = ["red", "blue", "pink"];
+for (let index in color) console.log(index, color[index]); //0red 1blue 2pink
