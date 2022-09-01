@@ -297,5 +297,6 @@ for (let key in persons) console.log(key, persons[key]);
 //Dot Notation  persons.nameR
 //Bracket Notation  persons["nameR"]
 
-const color = ["red", "blue", "pink"];
-for (let index in color) console.log(index, color[index]); //0red 1blue 2pink
+// FOR-OF LOOP
+const colors = ["red", "blue", "pink"];
+for (let color of colors) console.log(color); //red green blue
