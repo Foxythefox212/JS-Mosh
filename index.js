@@ -249,10 +249,10 @@ for (let i = 0; i <= 5; i++) {
 // WHILE (condition) apoi statement if apoi increment ++
 // LET e declarat extern fata de for care a declarat intern si
 //LET-urile sunt diferite
-let i = 0;
-while (i <= 5) {
-  if (i % 2 !== 0) console.log(i); // 1 3 5 odd=(numere impare)
-  i++;
+let I = 0; //Am pus I mare ca nu ma lasa sa pun i mic
+while (I <= 5) {
+  if (I % 2 !== 0) console.log(I); // 1 3 5 odd=(numere impare)
+  I++;
 }
 
 // DO-WHILE = Conditia e evaluata(luata in considerare) la sfarsit
@@ -262,3 +262,25 @@ do {
   if (i % 2 !== 0) console.log(i);
   i++;
 } while (i <= 5);
+
+// INFINITE LOOPS
+// Se poate crea infinit loop cu WHILE
+let ii = 0;
+while (ii < 5) {
+  console.log(ii);
+  ii++;
+}
+//SAU 
+while (true) {
+
+}//Infinite Loop
+
+// Se poate crea si cu DO-WHILE
+let w = o;
+do {
+  // w++;
+}while (w < 5);
+ for (let iii = 0; iii > 0; iii++)
+
+//Daca nu incrementam i sau ce declaram sau uitam sa punem a treia 
+// conditie i++ se creeaza loop
