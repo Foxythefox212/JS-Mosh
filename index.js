@@ -300,3 +300,17 @@ for (let key in persons) console.log(key, persons[key]);
 // FOR-OF LOOP
 const colors = ["red", "blue", "pink"];
 for (let color of colors) console.log(color); //red green blue
+
+// BREAK and CONTINUE
+//Se aplica la toate LOOP-urile invatate
+let iii = 0;
+while (iii <= 10) {
+  // if (iii === 5) break;//0 1 2 3 4
+  if (iii % 2 === 0) {
+    // 1 3 5 7 9
+    iii++;
+    continue;
+  }
+  console.log(iii);
+  iii++;
+}
