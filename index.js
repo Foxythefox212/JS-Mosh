@@ -314,3 +314,10 @@ while (iii <= 10) {
   console.log(iii);
   iii++;
 }
+
+// EXERCISE 01
+let numbers = max(7, 9);
+console.log(numbers);
+function max(e, f) {
+  return e > f ? e : f;
+}
