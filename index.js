@@ -315,9 +315,83 @@ while (iii <= 10) {
   iii++;
 }
 
-// EXERCISE 01
+// EXERCISE 01 (MAX of TWO NUMBERS)
 let numbers = max(7, 9);
 console.log(numbers);
 function max(e, f) {
   return e > f ? e : f;
+}
+
+// EXERCISE 02 (Landscape or Portrait)
+function isLandscape(width, height) {
+  return width > height;
+}
+const grater = isLandscape(50, 70);
+console.log(grater);
+
+// EXERCISE 03 (FizzBuzz asta se da si la interviuri)
+//Daca nr e divizibil cu 3 =Fizz
+//Daca nr e divizibil cu 5 =Buzz
+//Daca e divizibil cu 3 si 5 =FizzBuzz
+//Daca nu e divizibil cu 3,5 apare nr scris in paranteza
+//Daca nu e nr apare "Not a number"
+const output = fizzBuzz(3);
+console.log(output);
+
+function fizzBuzz(input) {
+  if (typeof input !== "number") return NaN; //Prima data sa vedem daca e numar
+  if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
+  if (input % 3 === 0) return "Fizz";
+  if (input % 5 === 0) return "Buzz";
+  return input;
+}
+
+//  EXERCISE 04 (Demerit Points)
+checkSpeed(130);
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
+
+  if (speed < speedLimit + kmPerPoint) {
+    console.log("OK");
+    return;
+  }
+  const points = Math.floor((speed - speedLimit) / kmPerPoint);
+  if (points >= 12) console.log("License suspended");
+  else console.log("Points", points);
+}
+
+// EXERCISE 05 (ODD, EVEN)
+showNumber(10);
+
+function showNumber(limit) {
+  for (let i = 0; i <= limit; i++) {
+    // if (i % 2 === 0) console.log(i, "EVEN");
+    // else console.log(i, "ODD"); Se poate asa  SAU
+
+    const message = i % 2 === 0 ? "EVEN" : "ODD";
+    console.log(i, message);
+  }
+}
+
+// EXERCISE 06 (Count TRUTHY)
+const array = [0, 1, 2, 3];
+console.log(countTruthy(array)); //Da 3 pt ca 0 ii Falsy
+function countTruthy(array) {
+  let count = 0;
+  for (let value of array) if (value) count++;
+  return count;
+}
+
+//  EXERCISES 07 (STRING PROPERTIES)
+const movie = {
+  title: "a",
+  releaseYear: 2018,
+  rating: 4.5,
+  director: "b",
+};
+showProperties(movie);
+function showProperties(obj) {
+  for (let key in obj)
+    if (typeof obj[key] === "string") console.log(key, obj[key]);
 }
