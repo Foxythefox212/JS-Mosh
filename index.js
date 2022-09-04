@@ -395,3 +395,61 @@ function showProperties(obj) {
   for (let key in obj)
     if (typeof obj[key] === "string") console.log(key, obj[key]);
 }
+
+//  EXERCISE 08: Sum of multiple of 3 and 5
+console.log(sum(10));
+
+function sum(limit) {
+  let sum = 0;
+  for (let i = 0; i <= limit; i++) if (i % 3 === 0 || i % 5 === 0) sum += i;
+
+  return sum;
+}
+
+//EXERCISE 09: GRADE OF A STUDENT
+const marks = [80, 80, 50];
+// Average = 80+80+50/3=70
+
+console.log(calculateGrade(marks));
+
+function calculateGrade(marks) {
+  const average = calculateAverage(marks);
+  if (average < 60) return "F";
+  if (average < 70) return "D";
+  if (average < 80) return "C";
+  if (average < 90) return "B";
+  return "A"; //Trebuie sa dea C si mie imi da A
+}
+
+function calculateAverage(array) {
+  let sum = 0;
+  for (let value of array) sum += value;
+  return sum / array.lenght;
+}
+
+// EXERCISE 10: STARS//Se da la Junior programatori
+showStars(5);
+
+function showStars(rows) {
+  for (let row = 1; row <= rows; row++) {
+    let pattern = " ";
+    for (let i = 0; i < row; i++) pattern += "*";
+    console.log(pattern);
+  }
+}
+
+//  EXERCISES 11: PRIME NUMBERS
+showPrimes(20);
+
+function showPrimes(limit) {
+  for (let number = 2; number <= limit; number++)
+    if (isPrime(number)) console.log(number);
+}
+
+function isPrime(number) {
+  let isPrime = true;
+  for (let factor = 2; factor < number; factor++)
+    if (number % factor === 0) return false;
+
+  return true;
+}
