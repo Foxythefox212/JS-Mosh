@@ -453,3 +453,57 @@ function isPrime(number) {
 
   return true;
 }
+
+// III-OBJECTS
+//= The object of an OBJECT si to group related variable
+//Ce avem mai jos se numeste OBJECT ORIENTED PROGRAMMING (OOP)
+//Colection of objects that talk to each other to perform functionality
+
+const circle = {
+  radius: 1,
+  location: {
+    x: 1,
+    y: 1,
+  },
+  isVisible: true,
+  draw: function () {
+    //Functia care ii in object i se spune method
+    //DOAR DACA E IN INTERIORUL LA OBJECT
+    console.log("draw");
+  },
+};
+//Pentru a le accesa folosim dot notation(.)
+//Si spunem ca folosim the draw method
+circle.draw(); //METHOD
+
+//01-FACTORY functions => se foloseste Camel Notation(unuDoiTreiPatru)
+//Factory function produc OBJECT
+function createCircle(radius, location) {
+  return {
+    radius, // = reprezita radius: radius,
+    draw() {
+      //II Functia draw daar ca scris fara functie
+      console.log("draw");
+    },
+  };
+}
+const circle1 = createCircle(1);
+console.log(circle1);
+
+const circle2 = createCircle(2);
+console.log(circle2);
+
+//02-CONSTRUCTOR Functions => se foloseste Pascal Notation(UnuDoiTreiPatru)
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+
+const ccircle = new Circle(1);
+// const xxx = {}
+//se intampla 3 lucruri in new
+//new = creaza empty OBJECT
+//new = seteaza this din acolada la acolada lui xxx
+//new = return object din functia Circle
