@@ -507,3 +507,55 @@ const ccircle = new Circle(1);
 //new = creaza empty OBJECT
 //new = seteaza this din acolada la acolada lui xxx
 //new = return object din functia Circle
+
+// OBJECT ARE DINAMIC !!!
+// Const circlee nu se poate schimba dar se poate adauga sau elimina elemente din ea
+const circlee = {
+  radius: 1,
+};
+circlee.color = "green"; //Introduci color in circlee
+circlee.draw = function () {}; //Introduci draw functia in circlee
+
+delete circlee.color; //Sterge color din circlee
+delete circlee.draw; //Sterge draw din circlee
+
+console.log(circlee);
+
+//FACTORY FUNCTION
+function createCircle(radius) {
+  return {
+    radius,
+    draw: function () {
+      console.log("draw");
+    },
+  };
+}
+
+const circleee = createCircle(1);
+
+//CONSTRUCT FUNCTION
+function Circleee(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log("draw");
+  };
+}
+
+//Every object has a constructor property !!!!
+
+// FUNCTION ARE OBJECTS !!!!!
+//Circleee.name  ("Circleee")
+//Circleee.length (1)
+// const Circleee1 = new Function(
+//   "radius",
+//   `this.radius = radius;
+// this.draw = function () {
+//   console.log("draw");
+// }
+// `
+// );
+// const circle3 = new Circleee1(1);
+
+Circleee.call({}, 1);
+Circleee.apply({}, [1, 2, 3]);
+const another = new Circleee(1);
