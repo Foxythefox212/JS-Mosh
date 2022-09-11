@@ -559,3 +559,130 @@ function Circleee(radius) {
 Circleee.call({}, 1);
 Circleee.apply({}, [1, 2, 3]);
 const another = new Circleee(1);
+
+//  VALUE vs REFERENCE TYPE
+
+// Value= Primitive(nr, null, boolean, string, symbol, undefined)
+// Reference=(Object, Function, Array)
+
+// Ceea ce constitue primitivele(adica cand lucram cu ele) sunt individuale
+// si valori lor sunt independente unele de altele
+
+// Pe cand la ceea ce constituie Reference acestea nu sunt stocate in
+// variabile si undeva in memorie si adresa unde e tinuta valoarea tipuli
+// reference e stocata in variabila
+
+// Primitive are copied by they value
+// Objects(Reference) are copied by they reference(locul unde sunt stocate)
+
+//  PROPERTIEs OF UN OBJECT
+
+const triunghi = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
+
+for (let key in triunghi) console.log(key, triunghi[key]); // radius draw
+
+// for (let key of triunghi) console.log(key); //Triunghi is not iterable
+// An OBJECT IS NOT ITERABLE(? nu stiu ce ii iterable)
+for (let key of Object.keys(triunghi)) console.log; // Apare radius 1
+//si draw care ii functie
+for (let entry of Object.entries(triunghi)) console.log(entry);
+
+// Acesta de sus iis forme sa ai acces la metode si proprietati ale Object
+
+if ("radius" in triunghi) console.log("yes"); //yes
+
+//  Cloning an Object
+
+// const anotherCircle = {};
+// for (let key in triunghi) anotherCircle[key] = triunghi[key];
+
+const anotherCircle = Object.assign({}, triunghi);
+//Metoda assign ia tot ce ii in triunghi si copiaza in acolada
+//Ii exact ca cel de sus da scris mai "modern"
+//Acolada poate sa aibe ceva in ea
+//ex: Object.assign({color:"yellow"}, triunghi)
+
+const anotherCircl = { ...triunghi }; //Cel mai simplu sa clonezi un Object
+
+console.log(anotherCircl); // radius=1 draw functie
+
+// Garbage Collection
+// In JavaScript variabilele care nu se mai folosesc sunt automat
+// dezactivate de catre program
+let triungh = {};
+console.log(triungh);
+
+// METHOD OBJECT - MATH, STRING,
+
+// Math.random() => Iti da un nr random intre 0 & 1
+
+// Math.round(1.9)
+// 2 => rotunjeste numarul
+
+// Math.max(1, 2, 3, 4, 5)
+// 5 => returneaza cel mai mare numar din lista
+
+// Math.min(1, 2, 3, 4, 5)
+// 1 => returneaza cel mai mic numar din lista
+
+// OBJECT METHOD - STRING - avem 2 tipuri de string
+// String primitive
+const mesage = " This is my first message ";
+
+// mesage.length
+// Apare 24 => numara caracterele inclusiv spatiul
+// mesage[0] => "T"; mesage[1] => "h"
+
+// mesage.includes("my")
+// true
+// mesage.includes("not")
+// false
+
+// mesage.startWith("This")  This !== this
+// true
+
+// mesage.endWith("e")
+// true
+
+// mesage.indexOf("my")
+// 8 => adica incepe la index 8
+
+// mwsage.replace("first", "second")
+// This is my second message => Nu schimba originalul
+
+// mesag.toUpperCase => THIS IS MY FIRST MESSAGE(originalul)
+
+// mesag.trim() => Te scapa de spatiile libere inainte si dupa mesaj
+
+// mesage.trimLeft => Te scapa de spatiile din stanga
+
+// mesage.split(" ") => ["This", "is", "my", "first", "message"]
+// Le desparte si le pun in ce am pus in paranteza
+
+// String Object
+const anot = new String("hi");
+
+// TEMPLATE LITERALS `` backtick
+
+const mesaj = "This is my\n first message"; // linie noua
+
+const ano = `This is my 
+first ${mesaj} message`;
+console.log(ano);
+
+// DATE OBJECT
+
+const now = new Date();
+const date1 = new Date("May 12 2022 08:20");
+const date2 = new Date(2018, 4, 11, 9, 0);
+
+now.getDate;
+now.getFullYear(2020);
+// now.toDateString() => "Thu May 11 2017"
+// now.toTimeString() => "11:35:01 GMT-0700 (PDT)"
+// now.toISOSString() => "2017-05-11T18:35:01.212Z"
