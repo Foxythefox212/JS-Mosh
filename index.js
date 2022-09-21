@@ -686,3 +686,49 @@ now.getFullYear(2020);
 // now.toDateString() => "Thu May 11 2017"
 // now.toTimeString() => "11:35:01 GMT-0700 (PDT)"
 // now.toISOSString() => "2017-05-11T18:35:01.212Z"
+
+// Exercise 01 Return maxima dintre 2 numere
+function number(minNumber, maxNumber) {
+  if (minNumber > maxNumber) return minNumber;
+  else return maxNumber; // else se poate sterge
+}
+// Se poate scrie si cu conditia
+// return condition ? a : b;
+const maxNumber = number(5, 5);
+console.log(maxNumber);
+
+// Exercise 02 Landscape or Portrate
+function isLandscap(width, height) {
+  if (width > height) return true;
+  return false;
+}
+// return(width > height) expresia e evaluata la true sau false pt ca e
+// comparatie si atunci da true sau false si nu mai e nevoie de return true
+// si return false=>  function isLandscap si return(width > height)
+const portrait = isLandscap(100, 200);
+console.log(portrait); //true
+
+// Exercise 03: FIZZBUZZ
+function fizzBuzz(input) {
+  if (typeof input !== "number") return NaN; //Primul pas
+  else if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz"; //Ordinea de
+  // scris conteaza => acum apare FizzBuzz
+  else if (input % 3 === 0) return "Fizz";
+  else if (input % 5 === 0) return "Buzz";
+  return input;
+}
+const outpu = fizzBuzz(8);
+console.log(outpu);
+
+// Exercise 04" Demerit Points
+function checkSpee(speed) {
+  const speedLimi = 70;
+  const kmPerPoin = 5;
+  if (speed < speedLimi + kmPerPoin) console.log("ok");
+  else {
+    const puncte = Math.floor((speed - speedLimi) / kmPerPoin);
+    if (puncte >= 12) console.log("License suspended");
+    else console.log("Puncte", puncte);
+  }
+}
+checkSpee(72);
