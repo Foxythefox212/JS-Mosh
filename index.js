@@ -732,3 +732,48 @@ function checkSpee(speed) {
   }
 }
 checkSpee(72);
+
+// Exercise 05 EVEN and ODD NUMBER
+function showNumbe(limit) {
+  for (showNumbe = 0; showNumbe <= 10; showNumbe++) {
+    if (showNumbe % 2 === 0) {
+      console.log(showNumbe, "Even");
+    } else if (showNumbe % 2 !== 0) {
+      console.log(showNumbe, "ODD");
+    }
+  }
+}
+showNumbe(10);
+
+// Exercise 06 COUNT TRUTHY
+function countTruthY(array) {
+  let count = 0;
+  for (let value of array) if (value) count++;
+  return count;
+}
+
+// Exercise 07 STRING PROPERTIES
+function showPropertie(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] === "string") {
+      console.log(key, obj[key]);
+    }
+  }
+}
+const film = {
+  title: "Alb",
+  director: "Negru",
+  rating: 5.9,
+  year: 2022,
+};
+showPropertie(film);
+
+// Exercise 08 SUM OF MULTIPLES OF 3 AND 5
+function sum(limit) {
+  let sum = 0;
+
+  for (let i = 0; i <= limit; i++) if (i % 3 === 0 || i % 5 === 0) sum += i;
+
+  return sum;
+}
+console.log(sum(10));
