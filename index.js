@@ -777,3 +777,63 @@ function sum(limit) {
   return sum;
 }
 console.log(sum(10));
+
+// Exercise : Address Object
+const address = {
+  street: "Dallas",
+  city: "Aiud",
+  zipCode: 515200,
+};
+
+function showAddress(address) {
+  for (let key in address) console.log(key, address[key]);
+}
+showAddress(address);
+
+/* Exercise : Factory and Constructor Function
+Factory Function : */
+function createAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode,
+  };
+}
+let addres = createAddress("Dallas", "Aiud", 515200);
+console.log(addres);
+// Constructor Function:
+function AddressA(street, city, zipCode) {
+  this.street = street;
+  this.city = city;
+  this.zipCode = zipCode;
+}
+let adres = new AddressA("Dallas", "Aiud", 515200);
+console.log(adres);
+
+// Exercise : Block post Object
+let blockObj = new BlockObj("a", "b", "c");
+console.log(blockObj);
+
+// Ca sa pot face functia Constructor cu this
+/*{
+  title: "UNtitlu",
+  body: "Uncorp",
+  author: "Ruxandra",
+  view: 30,
+  comments: [
+    { author: "Very good", body: "Corp" },
+    { author: "good", body: "corp" },
+  ],
+  isLive: true,
+}; */
+console.log(blockObj);
+
+// Exercise : Constructor Function
+function BlockObj(title, body, author) {
+  this.title = title;
+  this.body = body;
+  this.author = author;
+  this.view = 0;
+  this.comments = [];
+  this.isLive = false;
+}
